@@ -24,7 +24,7 @@ To use Selenium, download the latest webdriver compatable with your local machin
 # Installation Guide:
 ### Install from Github
 ```
-git clone [https://github.com/brunohenderyckx/tetrahymena-ucsc-scraper](https://github.com/brunohenderyckx/tetrahymena-ucsc-scraper)
+git clone https://github.com/brunohenderyckx/tetrahymena-ucsc-scraper
 cd tetrahymena-ucsc-scraper
 python3 setup.py install
 ```
