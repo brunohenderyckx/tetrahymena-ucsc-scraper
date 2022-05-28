@@ -6,11 +6,13 @@ import time
 
 driver = webdriver.Chrome('./chromedriver')
 
+# Add the genes you want to scrape to this genes.txt file
 with open('genes.txt') as f:
     genes = f.readlines()
 
 genes = [x.strip() for x in genes] 
 
+# Define the columns you want to scrape
 gene_list = []
 region_list = []
 gensize_list = []
@@ -20,6 +22,7 @@ sequence_list_a = []
 sequence_list_rev_a = []
 sequence_list_rev_b = []
 
+# Begin the scraping process
 driver.get("https://genome.ucsc.edu/cgi-bin/hgHubConnect?hubUrl=https%3A%2F%2Fdatahub-470-p17.p.genap.ca%2Fhub.txt&hgHub_do_firstDb=on&hgHub_do_redirect=on&hgHubConnect.remakeTrackHub=on&hgsid=1190106735_96ex38OZANHTAaLlgKF9VKc4ku0b")
 time.sleep(1)
 
@@ -116,6 +119,7 @@ for gene in genes:
 time.sleep(1)
 driver.close()
 
+# Save the scraped data to a dataframe
 df = pd.DataFrame()
 df['Gene'] = gene_list
 df['region_list'] = region_list
@@ -128,5 +132,5 @@ df['sequence_list_rev_a'] = sequence_list_rev_a
 df['sequence_list_rev_b'] = sequence_list_rev_b
 
 
-
+# Change the name of the excel file here
 df.to_excel('tRNA Seqalt.xlsx')
