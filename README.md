@@ -1,18 +1,39 @@
-# tetrahymena-ucsc-scraper
+# Tetrahymena UCSC Scraper
+
+## Overview
+
 __Author__ : Bruno Henderyckx
 
 __Email__ : brunohenderyckx10@gmail.com
 
+
 Description : Web scraper for UCSC tetrahymena
 
+## System Requirements
+### OS Requirements
+This package is supported for all platforms. The package has been tested on the following systems:
++ Windows (11)
 
-## Software to install
+### Python DependenciesThe Python script requires the following:
+* [python](https://www.python.org/) (>= 3.6)
+* [Pandas](https://pandas.pydata.org/) (>= 1.42)
+* [Selenium](https://www.selenium.dev/) (>=3.14)
 
-Python needs to be installed, packages dependencies are pandas & selenium.
+To use Selenium, download the latest webdriver compatable with your local machine browser [here](https://www.selenium.dev/documentation/webdriver/) and save that to the same folder as the script.
 
-From https://www.selenium.dev/documentation/webdriver/, download the latest webdriver compatable with your local machine browser and save that to the same folder as the script.
+# Installation Guide:
+### Install from Github
+```
+git clone [https://github.com/brunohenderyckx/tetrahymena-ucsc-scraper](https://github.com/brunohenderyckx/tetrahymena-ucsc-scraper)
+cd tetrahymena-ucsc-scraper
+python3 setup.py install
+```
+- `sudo`, if required
 
-## How to execute
+# Script Usage Guide
 Add the genes that you want to scrape to the genes.txt file.
 Change the name of the Output excel file. 
 Run the script.
+
+# License
+This project is covered under the **MIT License**.
