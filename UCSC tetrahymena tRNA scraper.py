@@ -23,11 +23,11 @@ sequence_list_rev_a = []
 sequence_list_rev_b = []
 
 # Begin the scraping process
-driver.get("https://genome.ucsc.edu/cgi-bin/hgHubConnect?hubUrl=https%3A%2F%2Fdatahub-470-p17.p.genap.ca%2Fhub.txt&hgHub_do_firstDb=on&hgHub_do_redirect=on&hgHubConnect.remakeTrackHub=on&hgsid=1190106735_96ex38OZANHTAaLlgKF9VKc4ku0b")
-time.sleep(1)
+driver.get("https://genome.ucsc.edu/cgi-bin/hgGateway?hgsid=1367078927_cEffyIUJ3cP5mgcZa1lmTcnhnCb8")
+time.sleep(5)
 
+print("start Scraping")
 for gene in genes:
-
     gene_list.append(gene)
     driver.get("https://genome.ucsc.edu/cgi-bin/hgTracks?db=hub_2893147_T_thermophila&lastVirtModeType=default&lastVirtModeExtraState=&virtModeType=default&virtMode=0&nonVirtPosition=&position=chr_135%3A1099873%2D1099945&hgsid=1131674227_Tnhf8Xh3rObUyIZH5U57VqKjXHzy")
     driver.find_element_by_xpath("/html/body/form[2]/center/input[3]").send_keys(gene)
