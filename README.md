@@ -15,9 +15,10 @@ This package is supported for all platforms. The package has been tested on the 
 + Windows (11)
 
 ### Python DependenciesThe Python script requires the following:
-* [python](https://www.python.org/) (>= 3.6)
-* [Pandas](https://pandas.pydata.org/) (>= 1.42)
-* [Selenium](https://www.selenium.dev/) (>=3.14)
+* [python](https://www.python.org/) (>= 3.10.4)
+* [pandas](https://pandas.pydata.org/) (>= 1.4.2)
+* [selenium](https://www.selenium.dev/) (>=4.20)
+* [openpyxl](https://openpyxl.readthedocs.io/en/stable/)) (>=3.0.9)
 
 To use Selenium, download the latest webdriver compatable with your local machine browser [here](https://www.selenium.dev/documentation/webdriver/) and save that to the same folder as the script.
 
